@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./script/main.js"></script>
+    <link rel="stylesheet" href="./style/variables.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/appwrapper.css">
+    <link rel="stylesheet" href="./style/dataitem.css">
+    <link rel="stylesheet" href="./style/buttons.css">
     <title>todolist</title>
 </head>
 <body>
-  <h1>todolist</h1>
-  <input type="text" name="title" id="title" placeholder="title" />
-  <textarea name="text" id="text" cols="30" rows="10" placeholder="text"></textarea>
-  <button id="addItem" type="button">add</button>
-  <button id="clearAllData" type="button">clearAllData</button>
-  <div id="dataContainer"></div>
+  <div class="appwrapper">
+    <section class="appwrapper__form">
+      <h1>todolist</h1>
+      <input type="text" name="title" id="title" placeholder="title" />
+      <textarea name="text" id="text" cols="30" placeholder="text"></textarea>
+      <p class="error" id="errorMsg">Error: one of the fields is empty</p>
+      <div class="buttons-wrapper">
+        <button id="addItem" type="button" class="button button__add">add</button>
+        <button id="clearAllData" type="button" class="button button__all-done">all done</button>
+      </div>
+    </section>
+    <section id="dataContainer" class="appwrapper__data"></section>
+  </div>
 </body>
 </html>

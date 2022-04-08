@@ -23,4 +23,8 @@ function CreateNewElement(tag, options = {}) {
   return element;
 }
 
+const ReturnFullDate = moment => `${moment.getDate()}.${moment.getMonth() + 1}.${moment.getFullYear()}`;
+const ReturnFullTime = moment => `${moment.getHours()}:${moment.getMinutes()}`;
+
+export { ReturnFullDate, ReturnFullTime };
 export default CreateNewElement;

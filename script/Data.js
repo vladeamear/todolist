@@ -1,4 +1,4 @@
-import CreateNewElement from './CreateNewElement.js';
+import CreateNewElement from './miscFunctions.js';
 
 const SetData = (obj) => {
   let todolist = JSON.parse(localStorage.getItem('todolist'));
@@ -26,17 +26,35 @@ const PrintData = data => {
   dataContainer.innerHTML = '';
   if (data) { 
     data.forEach((element, index) => {
-      let newElement = CreateNewElement('P', {
-        innerText: `id: ${index}, title: ${element.title}, text: ${element.text}`
+      const newElement = CreateNewElement('DIV', {
+        class: 'data-item'
       });
-      let xButton = CreateNewElement('BUTTON', {
+      const title = CreateNewElement('P', {
+        innerText: element.title,
+        class: 'data-item__title'
+      });
+      const date = CreateNewElement('SPAN', {
+        innerText: element.date,
+        class: 'data-item__date'
+      });
+      const time = CreateNewElement('SPAN', {
+        innerText: element.time,
+        class: 'data-item__time'
+      });
+      title.append(date, time);
+      const text = CreateNewElement('P', {
+        innerText: element.text,
+        class: 'data-item__text'
+      });
+      const xButton = CreateNewElement('BUTTON', {
         innerText: 'X',
         type: 'button',
+        class: 'data-item__remove',
         dataset: {
           delete: index
         }
-      })
-      newElement.append(xButton);
+      });
+      newElement.append(title, text, xButton);
       dataContainer.append(newElement);
     });
   }

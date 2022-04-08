@@ -1,0 +1,30 @@
+.appwrapper {
+  margin-inline: auto;
+  width: min(100% - 20px, 1800px);
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.appwrapper__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+}
+
+.appwrapper__data {
+  max-width: calc(75% - 20px);
+  width: 100%;
+  border: 1px solid blue;
+}
+
+@media (max-width: 1800px) {
+  .appwrapper {
+    background-color: aqua;
+  }
+}

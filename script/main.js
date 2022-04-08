@@ -28,6 +28,13 @@ clearAllData.addEventListener('click', () => {
 PrintData(GetData());
 
 dataContainer.addEventListener('click', event => {
+  const dataitem = event.target.closest('.data-item');
+  if (!dataitem){
+    return;
+  }
+  dataitem.classList.contains('data-item--full')
+  ? dataitem.classList.remove('data-item--full') 
+  : dataitem.classList.add('data-item--full') 
   if (!event.target.matches('button[data-delete]')) {
     return
   }

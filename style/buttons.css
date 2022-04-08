@@ -1,3 +1,6 @@
+button {
+  cursor: pointer;
+}
 .button {
   cursor: pointer;
   outline: none;
@@ -39,4 +42,13 @@
 .button__all-done:active {
   border-color: var(--color3);
   color: var(--color3);
+}
+
+.data-item__remove {
+  min-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 10px;
 }

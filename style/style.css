@@ -7,11 +7,17 @@ body{
   -ms-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(25deg, rgba(138,152,218,1) 25%, rgba(196,135,81,1) 76%, rgba(224,58,17,1) 100%);
 }
 
 h1 {
   font-family: 'Russo One', sans-serif;
   text-align: center;
+  margin-top: 0;
 }
 
 

@@ -54,7 +54,7 @@ const PrintData = data => {
           delete: index
         }
       });
-      newElement.append(title, text, xButton);
+      newElement.append(xButton, title, text);
       dataContainer.append(newElement);
     });
   }
